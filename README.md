@@ -1,9 +1,20 @@
 # MCP TabNews Integration
 
+[![smithery badge](https://smithery.ai/badge/@renant/mcp-tabnews)](https://smithery.ai/server/@renant/mcp-tabnews)
+
 A Model Context Protocol (MCP) integration for TabNews.
 
 ## Setup
 
+### Installing via Smithery
+
+To install mcp-tabnews for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@renant/mcp-tabnews):
+
+```bash
+npx -y @smithery/cli install @renant/mcp-tabnews --client claude
+```
+
+### Manual Installation
 1. Install dependencies:
 
 ```bash
