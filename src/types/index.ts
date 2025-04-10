@@ -68,3 +68,66 @@ export interface McpResponse {
   isError?: boolean;
   [key: string]: unknown;
 }
+
+export interface TabNewsContent {
+  id: string;
+  owner_id: string;
+  parent_id: string | null;
+  slug: string;
+  title: string;
+  status: string;
+  type: string;
+  source_url: string | null;
+  created_at: string;
+  updated_at: string;
+  published_at: string;
+  deleted_at: string | null;
+  owner_username: string;
+  tabcoins: number;
+  tabcoins_credit: number;
+  tabcoins_debit: number;
+  children_deep_count: number;
+}
+
+export interface TabNewsContentWithBody extends TabNewsContent {
+  body: string;
+}
+
+export interface TabNewsContentChildren extends TabNewsContentWithBody {
+  children: TabNewsContentChildren[];
+  children_deep_count: number;
+}
+
+export const CONTENT_STRATEGY = ["new", "old", "relevant"] as const;
+
+export type ContentStrategy = (typeof CONTENT_STRATEGY)[number];
+
+export interface GetContentsParams {
+  page?: number;
+  per_page?: number;
+  strategy?: ContentStrategy;
+}
+
+export interface GetContentByUserParams extends GetContentsParams {
+  username: string;
+}
+
+export interface GetContentParams {
+  username: string;
+  slug: string;
+}
+
+export interface AnalyticsUserCreated {
+  date: string;
+  cadastros: number;
+}
+
+export interface AnalyticsRootContentPublished {
+  date: string;
+  conteudos: number;
+}
+
+export interface AnalyticsChildContentPublished {
+  date: string;
+  respostas: number;
+}

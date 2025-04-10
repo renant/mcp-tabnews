@@ -1,7 +1,17 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { SERVER_CONFIG } from "./config/configs.ts";
-import { checkStatusTool } from "./tools/status.ts";
+import {
+  checkStatusTool,
+  getAnalyticsChildContentPublishedTool,
+  getAnalyticsRootContentPublishedTool,
+  getAnalyticsUserCreatedTool,
+  getContentChildrenTool,
+  getContentsByUserTool,
+  getContentsTool,
+  getContentTool,
+  getRssFeedTool,
+} from "./tools/status.ts";
 
 async function initializeServer() {
   // Create server instance
@@ -16,6 +26,62 @@ async function initializeServer() {
     checkStatusTool.description,
     checkStatusTool.parameters,
     checkStatusTool.handler
+  );
+
+  server.tool(
+    getContentsTool.name,
+    getContentsTool.description,
+    getContentsTool.parameters,
+    getContentsTool.handler
+  );
+
+  server.tool(
+    getContentsByUserTool.name,
+    getContentsByUserTool.description,
+    getContentsByUserTool.parameters,
+    getContentsByUserTool.handler
+  );
+
+  server.tool(
+    getContentTool.name,
+    getContentTool.description,
+    getContentTool.parameters,
+    getContentTool.handler
+  );
+
+  server.tool(
+    getContentChildrenTool.name,
+    getContentChildrenTool.description,
+    getContentChildrenTool.parameters,
+    getContentChildrenTool.handler
+  );
+
+  server.tool(
+    getAnalyticsUserCreatedTool.name,
+    getAnalyticsUserCreatedTool.description,
+    getAnalyticsUserCreatedTool.parameters,
+    getAnalyticsUserCreatedTool.handler
+  );
+
+  server.tool(
+    getAnalyticsRootContentPublishedTool.name,
+    getAnalyticsRootContentPublishedTool.description,
+    getAnalyticsRootContentPublishedTool.parameters,
+    getAnalyticsRootContentPublishedTool.handler
+  );
+
+  server.tool(
+    getAnalyticsChildContentPublishedTool.name,
+    getAnalyticsChildContentPublishedTool.description,
+    getAnalyticsChildContentPublishedTool.parameters,
+    getAnalyticsChildContentPublishedTool.handler
+  );
+
+  server.tool(
+    getRssFeedTool.name,
+    getRssFeedTool.description,
+    getRssFeedTool.parameters,
+    getRssFeedTool.handler
   );
 
   return server;
