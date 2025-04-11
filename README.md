@@ -32,6 +32,8 @@ This will show you all available tools, their parameters, and how to use them.
 
 ## Setup
 
+### Manual Installation
+
 1. Make sure you're using Node.js v23+
 
 ```bash
