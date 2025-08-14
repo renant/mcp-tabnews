@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/renant-mcp-tabnews-badge.png)](https://mseep.ai/app/renant-mcp-tabnews)
+
 # MCP TabNews Integration
 
 [![smithery badge](https://smithery.ai/badge/@renant/mcp-tabnews)](https://smithery.ai/server/@renant/mcp-tabnews)
