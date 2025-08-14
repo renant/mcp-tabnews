@@ -6,6 +6,10 @@ A Model Context Protocol (MCP) integration for TabNews.
 
 This MCP server is also available on [Smithery](https://smithery.ai/server/@renant/mcp-tabnews) for direct integration.
 
+<a href="https://glama.ai/mcp/servers/@renant/mcp-tabnews">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@renant/mcp-tabnews/badge" alt="TabNews Integration MCP server" />
+</a>
+
 ## Available Tools
 
 - `checkStatusTool`: Check the status of the TabNews API.
